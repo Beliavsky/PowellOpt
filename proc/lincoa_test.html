@@ -4,217 +4,142 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-   <meta name="description" content="PowellOpt -- Optimization algorithms by M.J.D. Powell">
-    
+      <meta name="description" content="PowellOpt -- Optimization algorithms by M.J.D. Powell">
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
 
     <title>lincoa_test &ndash; PowellOpt</title>
 
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
-    
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    
-    
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    <script src="../js/jquery-2.1.3.min.js"></script>
-    <script src="../js/svg-pan-zoom.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
   </head>
 
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
           <a class="navbar-brand" href="../index.html">PowellOpt </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-        
-            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
-              <a href="#" class="dropdown-toggle"
-              data-toggle="dropdown" role="button"
-              aria-haspopup="true"
-     aria-expanded="false">Contents <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          
-              
-            <li><a href="../lists/files.html">Source Files</a></li>
-        
-        
-        
-            <li><a href="../lists/modules.html">Modules</a></li>
-        
-            
-                                
-            <li><a href="../lists/procedures.html">Procedures</a></li>
-        
-        
-            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-               
-               
-        
-        
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
             </ul>
-        
-            </li>
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
-
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
-
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
-
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
-                             
-
-
-
-          </ul>
-        
-        <form action="../search.html" class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
         </div>
-<!--
-        <button type="submit" class="btn btn-default">Submit</button>
--->
-        </form>
-        
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <div class="container">
-    
-  
   <div class="row">
     <h1>lincoa_test
       <small>Subroutine</small>
-    
+      
     </h1>
-    
-<div class="row">
-  <div class="col-lg-12">
-<div class="well well-sm">
-  <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     
-     
-     
-     
-     
-    
-    
-     <li><i class="fa fa-list-ol"></i>
-       <a data-toggle="tooltip"
-    data-placement="bottom" data-html="true"
-    title=" 1.7% of total for procedures.">104 statements</a>
-     </li> 
-     
-     
-     
-    <li><i class="fa fa-code"></i><a href="../src/lincoa.f90"> Source File</a></li>
-     
-     
-  </ul>
-  <ol class="breadcrumb in-well text-right">
-  
-    
-     <li><a href='../sourcefile/lincoa.f90.html'>lincoa.f90</a></li>
-    
-     <li><a href='../module/lincoa_module.html'>lincoa_module</a></li>
-    
-  
-     <li class="active">lincoa_test</li>
-  </ol>
-</div>
-</div>
-</div>
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-  })
-</script>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title=" 1.7% of total for procedures.">104 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/lincoa.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/lincoa.f90.html'>lincoa.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/lincoa_module.html'>lincoa_module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">lincoa_test</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
   </div>
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    
-<div id="sidebar">
+      <div id="sidebar">
+      <h3>Contents</h3>
   
-<h3>Contents</h3>
- 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/lincoa_test.html#src">lincoa_test</a>
+      </div>
+    </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/lincoa_test.html#src">lincoa_test</a>
   </div>
-</div>
-
-
-
-</div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>
-public subroutine lincoa_test()
-    
-    
-   
+    <h2>public  subroutine lincoa_test()  
 </h2>
     
-  
 
-
-    
     <p>Test problem for <a href="../proc/lincoa.html">lincoa</a>.</p>
 <p>Calculate the tetrahedron of least volume that encloses the points
   <code>(XP(J),YP(J),ZP(J)), J=1,2,...,NP</code>. Our method requires the origin
@@ -238,166 +163,174 @@ public subroutine lincoa_test()
   the data points <code>(XP(J),YP(J),ZP(J)), J=1,2,...,NP</code>. The smaller final
   value of the objective function in the case NPT=35 shows that the
   problem has local minima.</p>
-    
+
 
     <h3>Arguments</h3>
-    
     <em>None</em>
     <br>
-    
-    
-    
     <br>
-    
-    
-    <div class="panel panel-default">
-      <div class="panel-heading">
-  <h3 class="panel-title">Calls</h3>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
   <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: proc~~lincoa_test~~CallsGraph Pages: 1 -->
-<svg id="proclincoa_testCallsGraph" width="438pt" height="154pt"
- viewBox="0.00 0.00 438.00 154.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~lincoa_test~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 150)">
+<svg id="proclincoa_testCallsGraph" width="641pt" height="117pt"
+ viewBox="0.00 0.00 641.00 117.38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~lincoa_test~~CallsGraph" class="graph" transform="scale(1.31 1.31) rotate(0) translate(4 150)">
 <title>proc~~lincoa_test~~CallsGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-150 434,-150 434,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-150 837,-150 837,4 -4,4"/>
 <!-- proc~lincoa_test -->
 <g id="proc~~lincoa_test~~CallsGraph_node1" class="node">
 <title>proc~lincoa_test</title>
-<polygon fill="none" stroke="black" points="70,-86 0,-86 0,-62 70,-62 70,-86"/>
-<text text-anchor="middle" x="35" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50">lincoa_test</text>
+<polygon fill="none" stroke="black" points="155,-84 0,-84 0,-60 155,-60 155,-84"/>
+<text text-anchor="middle" x="77.5" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50">lincoa_module::lincoa_test</text>
 </g>
 <!-- proc~lincoa -->
 <g id="proc~~lincoa_test~~CallsGraph_node2" class="node">
 <title>proc~lincoa</title>
-<g id="a_proc~~lincoa_test~~CallsGraph_node2"><a xlink:href=".././proc/lincoa.html" xlink:title="lincoa">
-<polygon fill="#d9534f" stroke="#d9534f" points="160,-86 106,-86 106,-62 160,-62 160,-86"/>
-<text text-anchor="middle" x="133" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa</text>
+<g id="a_proc~~lincoa_test~~CallsGraph_node2"><a xlink:href=".././proc/lincoa.html" xlink:title="lincoa_module::lincoa">
+<polygon fill="#d9534f" stroke="#d9534f" points="321,-84 191,-84 191,-60 321,-60 321,-84"/>
+<text text-anchor="middle" x="256" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa_module::lincoa</text>
 </a>
 </g>
 </g>
 <!-- proc~lincoa_test&#45;&gt;proc~lincoa -->
 <g id="proc~~lincoa_test~~CallsGraph_edge1" class="edge">
 <title>proc~lincoa_test&#45;&gt;proc~lincoa</title>
-<path fill="none" stroke="#000000" d="M70.12,-74C78.38,-74 87.24,-74 95.6,-74"/>
-<polygon fill="#000000" stroke="#000000" points="95.84,-77.5 105.84,-74 95.84,-70.5 95.84,-77.5"/>
+<path fill="none" stroke="#000000" d="M155.15,-72C163.61,-72 172.22,-72 180.66,-72"/>
+<polygon fill="#000000" stroke="#000000" points="180.84,-75.5 190.84,-72 180.84,-68.5 180.84,-75.5"/>
 </g>
 <!-- proc~lincob -->
 <g id="proc~~lincoa_test~~CallsGraph_node3" class="node">
 <title>proc~lincob</title>
-<g id="a_proc~~lincoa_test~~CallsGraph_node3"><a xlink:href=".././proc/lincob.html" xlink:title="lincob">
-<polygon fill="#d9534f" stroke="#d9534f" points="250,-86 196,-86 196,-62 250,-62 250,-86"/>
-<text text-anchor="middle" x="223" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincob</text>
+<g id="a_proc~~lincoa_test~~CallsGraph_node3"><a xlink:href=".././proc/lincob.html" xlink:title="lincoa_module::lincob">
+<polygon fill="#d9534f" stroke="#d9534f" points="487,-84 357,-84 357,-60 487,-60 487,-84"/>
+<text text-anchor="middle" x="422" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa_module::lincob</text>
 </a>
 </g>
 </g>
 <!-- proc~lincoa&#45;&gt;proc~lincob -->
 <g id="proc~~lincoa_test~~CallsGraph_edge2" class="edge">
 <title>proc~lincoa&#45;&gt;proc~lincob</title>
-<path fill="none" stroke="#000000" d="M160.4,-74C168.39,-74 177.31,-74 185.82,-74"/>
-<polygon fill="#000000" stroke="#000000" points="185.92,-77.5 195.92,-74 185.92,-70.5 185.92,-77.5"/>
-</g>
-<!-- proc~qmstep -->
-<g id="proc~~lincoa_test~~CallsGraph_node4" class="node">
-<title>proc~qmstep</title>
-<g id="a_proc~~lincoa_test~~CallsGraph_node4"><a xlink:href=".././proc/qmstep.html" xlink:title="qmstep">
-<polygon fill="#d9534f" stroke="#d9534f" points="340,-146 286,-146 286,-122 340,-122 340,-146"/>
-<text text-anchor="middle" x="313" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">qmstep</text>
-</a>
-</g>
-</g>
-<!-- proc~lincob&#45;&gt;proc~qmstep -->
-<g id="proc~~lincoa_test~~CallsGraph_edge3" class="edge">
-<title>proc~lincob&#45;&gt;proc~qmstep</title>
-<path fill="none" stroke="#000000" d="M241.81,-86.14C254.45,-94.76 271.63,-106.48 285.83,-116.16"/>
-<polygon fill="#000000" stroke="#000000" points="283.98,-119.13 294.22,-121.88 287.93,-113.35 283.98,-119.13"/>
-</g>
-<!-- proc~update~3 -->
-<g id="proc~~lincoa_test~~CallsGraph_node5" class="node">
-<title>proc~update~3</title>
-<g id="a_proc~~lincoa_test~~CallsGraph_node5"><a xlink:href=".././proc/update~3.html" xlink:title="update">
-<polygon fill="#d9534f" stroke="#d9534f" points="430,-86 376,-86 376,-62 430,-62 430,-86"/>
-<text text-anchor="middle" x="403" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">update</text>
-</a>
-</g>
-</g>
-<!-- proc~lincob&#45;&gt;proc~update~3 -->
-<g id="proc~~lincoa_test~~CallsGraph_edge5" class="edge">
-<title>proc~lincob&#45;&gt;proc~update~3</title>
-<path fill="none" stroke="#000000" d="M250.24,-74.52C261.28,-74.71 274.27,-74.91 286,-75 310,-75.19 316,-75.19 340,-75 348.25,-74.93 357.12,-74.82 365.49,-74.69"/>
-<polygon fill="#000000" stroke="#000000" points="365.81,-78.18 375.76,-74.52 365.7,-71.18 365.81,-78.18"/>
-</g>
-<!-- proc~trstep~2 -->
-<g id="proc~~lincoa_test~~CallsGraph_node6" class="node">
-<title>proc~trstep~2</title>
-<g id="a_proc~~lincoa_test~~CallsGraph_node6"><a xlink:href=".././proc/trstep~2.html" xlink:title="trstep">
-<polygon fill="#d9534f" stroke="#d9534f" points="340,-24 286,-24 286,0 340,0 340,-24"/>
-<text text-anchor="middle" x="313" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">trstep</text>
-</a>
-</g>
-</g>
-<!-- proc~lincob&#45;&gt;proc~trstep~2 -->
-<g id="proc~~lincoa_test~~CallsGraph_edge4" class="edge">
-<title>proc~lincob&#45;&gt;proc~trstep~2</title>
-<path fill="none" stroke="#000000" d="M241.39,-61.75C254.24,-52.69 271.96,-40.21 286.43,-30.01"/>
-<polygon fill="#000000" stroke="#000000" points="288.79,-32.63 294.95,-24.01 284.76,-26.91 288.79,-32.63"/>
+<path fill="none" stroke="#000000" d="M321.35,-72C329.64,-72 338.19,-72 346.62,-72"/>
+<polygon fill="#000000" stroke="#000000" points="346.84,-75.5 356.84,-72 346.84,-68.5 346.84,-75.5"/>
 </g>
 <!-- proc~prelim~2 -->
-<g id="proc~~lincoa_test~~CallsGraph_node7" class="node">
+<g id="proc~~lincoa_test~~CallsGraph_node4" class="node">
 <title>proc~prelim~2</title>
-<g id="a_proc~~lincoa_test~~CallsGraph_node7"><a xlink:href=".././proc/prelim~2.html" xlink:title="prelim">
-<polygon fill="#d9534f" stroke="#d9534f" points="340,-66 286,-66 286,-42 340,-42 340,-66"/>
-<text text-anchor="middle" x="313" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">prelim</text>
+<g id="a_proc~~lincoa_test~~CallsGraph_node4"><a xlink:href=".././proc/prelim~2.html" xlink:title="lincoa_module::prelim">
+<polygon fill="#d9534f" stroke="#d9534f" points="658,-146 526,-146 526,-122 658,-122 658,-146"/>
+<text text-anchor="middle" x="592" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa_module::prelim</text>
 </a>
 </g>
 </g>
 <!-- proc~lincob&#45;&gt;proc~prelim~2 -->
-<g id="proc~~lincoa_test~~CallsGraph_edge6" class="edge">
+<g id="proc~~lincoa_test~~CallsGraph_edge3" class="edge">
 <title>proc~lincob&#45;&gt;proc~prelim~2</title>
-<path fill="none" stroke="#000000" d="M250.4,-68C258.48,-66.16 267.51,-64.11 276.1,-62.16"/>
-<polygon fill="#000000" stroke="#000000" points="276.94,-65.56 285.92,-59.93 275.39,-58.73 276.94,-65.56"/>
+<path fill="none" stroke="#000000" d="M450.76,-84.16C470.68,-92.7 498.27,-104.13 523,-113 528.51,-114.98 534.32,-116.94 540.11,-118.83"/>
+<polygon fill="#000000" stroke="#000000" points="539.22,-122.22 549.81,-121.93 541.35,-115.55 539.22,-122.22"/>
+</g>
+<!-- proc~qmstep -->
+<g id="proc~~lincoa_test~~CallsGraph_node5" class="node">
+<title>proc~qmstep</title>
+<g id="a_proc~~lincoa_test~~CallsGraph_node5"><a xlink:href=".././proc/qmstep.html" xlink:title="lincoa_module::qmstep">
+<polygon fill="#d9534f" stroke="#d9534f" points="661,-104 523,-104 523,-80 661,-80 661,-104"/>
+<text text-anchor="middle" x="592" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa_module::qmstep</text>
+</a>
+</g>
+</g>
+<!-- proc~lincob&#45;&gt;proc~qmstep -->
+<g id="proc~~lincoa_test~~CallsGraph_edge4" class="edge">
+<title>proc~lincob&#45;&gt;proc~qmstep</title>
+<path fill="none" stroke="#000000" d="M487.47,-79.68C495.7,-80.65 504.18,-81.66 512.6,-82.67"/>
+<polygon fill="#000000" stroke="#000000" points="512.45,-86.17 522.8,-83.88 513.28,-79.22 512.45,-86.17"/>
+</g>
+<!-- proc~trstep -->
+<g id="proc~~lincoa_test~~CallsGraph_node6" class="node">
+<title>proc~trstep</title>
+<g id="a_proc~~lincoa_test~~CallsGraph_node6"><a xlink:href=".././proc/trstep.html" xlink:title="lincoa_module::trstep">
+<polygon fill="#d9534f" stroke="#d9534f" points="656.5,-24 527.5,-24 527.5,0 656.5,0 656.5,-24"/>
+<text text-anchor="middle" x="592" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa_module::trstep</text>
+</a>
+</g>
+</g>
+<!-- proc~lincob&#45;&gt;proc~trstep -->
+<g id="proc~~lincoa_test~~CallsGraph_edge5" class="edge">
+<title>proc~lincob&#45;&gt;proc~trstep</title>
+<path fill="none" stroke="#000000" d="M457,-59.86C483.16,-50.52 519.49,-37.54 547.72,-27.46"/>
+<polygon fill="#000000" stroke="#000000" points="549.1,-30.68 557.34,-24.02 546.75,-24.09 549.1,-30.68"/>
+</g>
+<!-- proc~update~2 -->
+<g id="proc~~lincoa_test~~CallsGraph_node7" class="node">
+<title>proc~update~2</title>
+<g id="a_proc~~lincoa_test~~CallsGraph_node7"><a xlink:href=".././proc/update~2.html" xlink:title="lincoa_module::update">
+<polygon fill="#d9534f" stroke="#d9534f" points="833,-106 697,-106 697,-82 833,-82 833,-106"/>
+<text text-anchor="middle" x="765" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa_module::update</text>
+</a>
+</g>
+</g>
+<!-- proc~lincob&#45;&gt;proc~update~2 -->
+<g id="proc~~lincoa_test~~CallsGraph_edge6" class="edge">
+<title>proc~lincob&#45;&gt;proc~update~2</title>
+<path fill="none" stroke="#000000" d="M487.1,-67.79C535.12,-65.59 602.37,-64.53 661,-71 677.06,-72.77 694.28,-76.05 709.95,-79.59"/>
+<polygon fill="#000000" stroke="#000000" points="709.46,-83.07 720,-81.94 711.06,-76.26 709.46,-83.07"/>
+</g>
+<!-- proc~prelim~2&#45;&gt;proc~update~2 -->
+<g id="proc~~lincoa_test~~CallsGraph_edge7" class="edge">
+<title>proc~prelim~2&#45;&gt;proc~update~2</title>
+<path fill="none" stroke="#000000" d="M644.31,-122C662.65,-117.71 683.51,-112.83 702.62,-108.36"/>
+<polygon fill="#000000" stroke="#000000" points="703.5,-111.75 712.44,-106.06 701.9,-104.93 703.5,-111.75"/>
 </g>
 <!-- proc~getact -->
 <g id="proc~~lincoa_test~~CallsGraph_node8" class="node">
 <title>proc~getact</title>
-<g id="a_proc~~lincoa_test~~CallsGraph_node8"><a xlink:href=".././proc/getact.html" xlink:title="getact">
-<polygon fill="#d9534f" stroke="#d9534f" points="430,-24 376,-24 376,0 430,0 430,-24"/>
-<text text-anchor="middle" x="403" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">getact</text>
+<g id="a_proc~~lincoa_test~~CallsGraph_node8"><a xlink:href=".././proc/getact.html" xlink:title="lincoa_module::getact">
+<polygon fill="#d9534f" stroke="#d9534f" points="831,-24 699,-24 699,0 831,0 831,-24"/>
+<text text-anchor="middle" x="765" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lincoa_module::getact</text>
 </a>
 </g>
 </g>
-<!-- proc~trstep~2&#45;&gt;proc~getact -->
-<g id="proc~~lincoa_test~~CallsGraph_edge7" class="edge">
-<title>proc~trstep~2&#45;&gt;proc~getact</title>
-<path fill="none" stroke="#000000" d="M340.4,-12C348.39,-12 357.31,-12 365.82,-12"/>
-<polygon fill="#000000" stroke="#000000" points="365.92,-15.5 375.92,-12 365.92,-8.5 365.92,-15.5"/>
-</g>
-<!-- proc~prelim~2&#45;&gt;proc~update~3 -->
+<!-- proc~trstep&#45;&gt;proc~getact -->
 <g id="proc~~lincoa_test~~CallsGraph_edge8" class="edge">
-<title>proc~prelim~2&#45;&gt;proc~update~3</title>
-<path fill="none" stroke="#000000" d="M340.4,-60C348.48,-61.84 357.51,-63.89 366.1,-65.84"/>
-<polygon fill="#000000" stroke="#000000" points="365.39,-69.27 375.92,-68.07 366.94,-62.44 365.39,-69.27"/>
+<title>proc~trstep&#45;&gt;proc~getact</title>
+<path fill="none" stroke="#000000" d="M656.67,-12C667.11,-12 678.01,-12 688.69,-12"/>
+<polygon fill="#000000" stroke="#000000" points="688.85,-15.5 698.85,-12 688.85,-8.5 688.85,-15.5"/>
 </g>
 </g>
 </svg>
-</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
-    <p>Nodes of different colours represent the following: </p>
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+</div>                <script>
+                  var panproclincoa_testCallsGraph = svgPanZoom('#proclincoa_testCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>        <div><a type="button" class="graph-help" data-toggle="modal" href="#CallsGraph-help-text">Help</a></div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                </div>
+              <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="597pt" height="32pt"
- viewBox="0.00 0.00 596.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.16 1.16) rotate(0) translate(4 28)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 592.5,-28 592.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
 <!-- Subroutine -->
 <g id="node1" class="node">
 <title>Subroutine</title>
@@ -416,289 +349,238 @@ public subroutine lincoa_test()
 <polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
 <text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
 </g>
-<!-- Unknown Procedure Type -->
+<!-- Type Bound Procedure -->
 <g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
 <title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="388.5,-24 243.5,-24 243.5,0 388.5,0 388.5,-24"/>
-<text text-anchor="middle" x="316" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
 </g>
 <!-- Program -->
-<g id="node5" class="node">
+<g id="node6" class="node">
 <title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="465,-24 407,-24 407,0 465,0 465,-24"/>
-<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node6" class="node">
+<g id="node7" class="node">
 <title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="588.5,-24 483.5,-24 483.5,0 588.5,0 588.5,-24"/>
-<text text-anchor="middle" x="536" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
 
-    
-    <p>Solid arrows point from a procedure to one which it calls. Dashed 
-    arrows point from an interface to procedures which implement that interface.
-    This could include the module procedures in a generic interface or the
-    implementation in a submodule of an interface in a parent module.
-    </p>
-    </div></div></div></div>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-     
-     
     <br>
 
-    <section class="visible-xs visible-sm hidden-md">
-      
-<h3>Contents</h3>
- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="panel panel-primary">
-  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-  <div class="list-group">
-    <a class="list-group-item" href="../proc/lincoa_test.html#src">lincoa_test</a>
-  </div>
-</div>
-
-
-
-    </section>
-    <br class="visible-xs visible-sm hidden-md">
-
-    
-
-    
-    
-    
     
     
 
     
     
-    
-    
-    
 
 
-    
-    
+
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lincoa_test</span> <span class="p">()</span>
+    <div class="hl codehilite"><pre><span></span><span class="w">    </span><span class="k">subroutine </span><span class="n">lincoa_test</span><span class="w"> </span><span class="p">()</span>
 
-        <span class="k">implicit none</span>
+<span class="w">        </span><span class="k">implicit none</span>
 
-<span class="k">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">xp</span> <span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">yp</span> <span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">zp</span> <span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">a</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">b</span> <span class="p">(</span><span class="mi">200</span><span class="p">),</span> <span class="n">x</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ia</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">np</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">jcase</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">maxfun</span><span class="p">,</span><span class="n">npt</span><span class="p">,</span><span class="n">m</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">sumx</span><span class="p">,</span><span class="n">sumy</span><span class="p">,</span><span class="n">sumz</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">fmax</span><span class="p">,</span><span class="n">rhobeg</span><span class="p">,</span><span class="n">rhoend</span><span class="p">,</span><span class="n">ss</span><span class="p">,</span><span class="n">xs</span><span class="p">,</span><span class="n">ys</span><span class="p">,</span><span class="n">zs</span>
-    <span class="c">!</span>
-    <span class="c">!     Set some constants.</span>
-    <span class="c">!</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">one</span>  <span class="o">=</span> <span class="mf">1.0_wp</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">two</span>  <span class="o">=</span> <span class="mf">2.0_wp</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">zero</span> <span class="o">=</span> <span class="mf">0.0_wp</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">pi</span>   <span class="o">=</span> <span class="mf">4.0_wp</span> <span class="o">*</span> <span class="nb">atan</span><span class="p">(</span><span class="n">one</span><span class="p">)</span>
+<span class="k">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"> </span><span class="n">zp</span><span class="w"> </span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">),</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="p">(</span><span class="mi">200</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="w">        </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ia</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">np</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">jcase</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">maxfun</span><span class="p">,</span><span class="n">npt</span><span class="p">,</span><span class="n">m</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">sumx</span><span class="p">,</span><span class="n">sumy</span><span class="p">,</span><span class="n">sumz</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">fmax</span><span class="p">,</span><span class="n">rhobeg</span><span class="p">,</span><span class="n">rhoend</span><span class="p">,</span><span class="n">ss</span><span class="p">,</span><span class="n">xs</span><span class="p">,</span><span class="n">ys</span><span class="p">,</span><span class="n">zs</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">!     Set some constants.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">one</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0_wp</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">two</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0_wp</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">zero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0_wp</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pi</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0_wp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">atan</span><span class="p">(</span><span class="n">one</span><span class="p">)</span>
 
-        <span class="n">ia</span> <span class="o">=</span> <span class="mi">12</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">12</span>
-    <span class="c">!</span>
-    <span class="c">!     Set the data points.</span>
-    <span class="c">!</span>
-        <span class="n">np</span> <span class="o">=</span> <span class="mi">50</span>
-        <span class="n">sumx</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">sumy</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">sumz</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span>
-            <span class="n">theta</span> <span class="o">=</span> <span class="kt">real</span> <span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">wp</span><span class="p">)</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="kt">real</span> <span class="p">(</span><span class="n">np</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">wp</span><span class="p">)</span>
-            <span class="n">xp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="nb">cos</span> <span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="nb">cos</span> <span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
-            <span class="n">sumx</span> <span class="o">=</span> <span class="n">sumx</span> <span class="o">+</span> <span class="n">xp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span>
-            <span class="n">yp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="nb">sin</span> <span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="nb">cos</span> <span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
-            <span class="n">sumy</span> <span class="o">=</span> <span class="n">sumy</span> <span class="o">+</span> <span class="n">yp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span>
-            <span class="n">zp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="nb">sin</span> <span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
-            <span class="n">sumz</span> <span class="o">=</span> <span class="n">sumz</span> <span class="o">+</span> <span class="n">zp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span>
-        <span class="k">end do</span>
-<span class="k">        </span><span class="n">sumx</span> <span class="o">=</span> <span class="n">sumx</span> <span class="o">/</span> <span class="kt">real</span> <span class="p">(</span><span class="n">np</span><span class="p">,</span> <span class="n">wp</span><span class="p">)</span>
-        <span class="n">sumy</span> <span class="o">=</span> <span class="n">sumy</span> <span class="o">/</span> <span class="kt">real</span> <span class="p">(</span><span class="n">np</span><span class="p">,</span> <span class="n">wp</span><span class="p">)</span>
-        <span class="n">sumz</span> <span class="o">=</span> <span class="n">sumz</span> <span class="o">/</span> <span class="kt">real</span> <span class="p">(</span><span class="n">np</span><span class="p">,</span> <span class="n">wp</span><span class="p">)</span>
-        <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span>
-            <span class="n">xp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">xp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">sumx</span>
-            <span class="n">yp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">yp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">sumy</span>
-            <span class="n">zp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">zp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">sumz</span>
-        <span class="k">end do</span>
-    <span class="c">!</span>
-    <span class="c">!     Set the linear constraints.</span>
-    <span class="c">!</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span>
-        <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">m</span>
-            <span class="n">b</span> <span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
-            <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span>
-                <span class="n">a</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-            <span class="k">end do</span>
+<span class="w">        </span><span class="n">ia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span>
+<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">!     Set the data points.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">        </span><span class="n">np</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span>
+<span class="w">        </span><span class="n">sumx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">        </span><span class="n">sumy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">        </span><span class="n">sumz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">        </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">np</span>
+<span class="w">            </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="n">np</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">wp</span><span class="p">)</span>
+<span class="w">            </span><span class="n">xp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">cos</span><span class="w"> </span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">cos</span><span class="w"> </span><span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
+<span class="w">            </span><span class="n">sumx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<span class="w">            </span><span class="n">yp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sin</span><span class="w"> </span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">cos</span><span class="w"> </span><span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
+<span class="w">            </span><span class="n">sumy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<span class="w">            </span><span class="n">zp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sin</span><span class="w"> </span><span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
+<span class="w">            </span><span class="n">sumz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumz</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">zp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="k">        </span><span class="n">sumx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumx</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="n">np</span><span class="p">,</span><span class="w"> </span><span class="n">wp</span><span class="p">)</span>
+<span class="w">        </span><span class="n">sumy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumy</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="n">np</span><span class="p">,</span><span class="w"> </span><span class="n">wp</span><span class="p">)</span>
+<span class="w">        </span><span class="n">sumz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumz</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kt">real</span><span class="w"> </span><span class="p">(</span><span class="n">np</span><span class="p">,</span><span class="w"> </span><span class="n">wp</span><span class="p">)</span>
+<span class="w">        </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">np</span>
+<span class="w">            </span><span class="n">xp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sumx</span>
+<span class="w">            </span><span class="n">yp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sumy</span>
+<span class="w">            </span><span class="n">zp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sumz</span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">!     Set the linear constraints.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">        </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">np</span>
+<span class="w">        </span><span class="k">do </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">m</span>
+<span class="w">            </span><span class="n">b</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span>
+<span class="w">            </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span>
+<span class="w">                </span><span class="n">a</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">            </span><span class="k">end do</span>
 <span class="k">        end do</span>
-<span class="k">        do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span>
-            <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span>
-                <span class="n">k</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">j</span> <span class="o">+</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">4</span>
-                <span class="n">iw</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">i</span>
-                <span class="n">a</span> <span class="p">(</span><span class="n">iw</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="n">xp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span>
-                <span class="n">a</span> <span class="p">(</span><span class="n">iw</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="n">yp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span>
-                <span class="n">a</span> <span class="p">(</span><span class="n">iw</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span> <span class="o">=</span> <span class="n">zp</span> <span class="p">(</span><span class="n">j</span><span class="p">)</span>
-            <span class="k">end do</span>
+<span class="k">        do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">np</span>
+<span class="w">            </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">                </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">                </span><span class="n">iw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span>
+<span class="w">                </span><span class="n">a</span><span class="w"> </span><span class="p">(</span><span class="n">iw</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<span class="w">                </span><span class="n">a</span><span class="w"> </span><span class="p">(</span><span class="n">iw</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<span class="w">                </span><span class="n">a</span><span class="w"> </span><span class="p">(</span><span class="n">iw</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zp</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<span class="w">            </span><span class="k">end do</span>
 <span class="k">        end do</span>
-    <span class="c">!</span>
-    <span class="c">!     Set the initial vector of variables. The JCASE=1,6 loop gives six</span>
-    <span class="c">!       different choices of NPT when LINCOA is called.</span>
-    <span class="c">!</span>
-        <span class="n">xs</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">ys</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">zs</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">ss</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span>
-            <span class="n">xs</span> <span class="o">=</span> <span class="nb">min</span> <span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">xp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-            <span class="n">ys</span> <span class="o">=</span> <span class="nb">min</span> <span class="p">(</span><span class="n">ys</span><span class="p">,</span> <span class="n">yp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-            <span class="n">zs</span> <span class="o">=</span> <span class="nb">min</span> <span class="p">(</span><span class="n">zs</span><span class="p">,</span> <span class="n">zp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-            <span class="n">ss</span> <span class="o">=</span> <span class="nb">max</span> <span class="p">(</span><span class="n">ss</span><span class="p">,</span> <span class="n">xp</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">yp</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">zp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-        <span class="k">end do</span>
-<span class="k">        </span><span class="n">fmax</span> <span class="o">=</span> <span class="p">(</span><span class="n">ss</span><span class="o">-</span><span class="n">xs</span><span class="o">-</span><span class="n">ys</span><span class="o">-</span><span class="n">zs</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="mf">6.0_wp</span>
-        <span class="k">do </span><span class="n">jcase</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span>
-            <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span>
-                <span class="n">x</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-            <span class="k">end do</span>
-<span class="k">            </span><span class="n">x</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span> <span class="o">/</span> <span class="n">xs</span>
-            <span class="n">x</span> <span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span> <span class="o">/</span> <span class="n">ys</span>
-            <span class="n">x</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span> <span class="o">/</span> <span class="n">zs</span>
-            <span class="n">x</span> <span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span> <span class="o">/</span> <span class="n">ss</span>
-            <span class="n">x</span> <span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span> <span class="o">/</span> <span class="n">ss</span>
-            <span class="n">x</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span> <span class="o">/</span> <span class="n">ss</span>
-    <span class="c">!</span>
-    <span class="c">!     Call of LINCOA, which provides the printing given at the end of this</span>
-    <span class="c">!       note.</span>
-    <span class="c">!</span>
-            <span class="n">npt</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">jcase</span> <span class="o">+</span> <span class="mi">10</span>
-            <span class="n">rhobeg</span> <span class="o">=</span> <span class="mf">1.0_wp</span>
-            <span class="n">rhoend</span> <span class="o">=</span> <span class="mf">1.0e-6_wp</span>
-            <span class="n">iprint</span> <span class="o">=</span> <span class="mi">1</span>
-            <span class="n">maxfun</span> <span class="o">=</span> <span class="mi">10000</span>
-            <span class="k">print </span><span class="mi">70</span><span class="p">,</span> <span class="n">npt</span><span class="p">,</span> <span class="n">rhoend</span>
-<span class="mi">70</span>          <span class="k">format</span> <span class="p">(</span><span class="o">/</span> <span class="o">/</span> <span class="mi">4</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;Output from LINCOA with  NPT =&#39;</span><span class="p">,</span> <span class="n">i4</span><span class="p">,</span> <span class="s1">&#39;  and  RHOEND =&#39;</span><span class="p">,</span> <span class="mi">1</span> <span class="p">&amp;</span>
-           <span class="p">&amp;</span> <span class="n">pd12</span><span class="p">.</span><span class="mi">4</span><span class="p">)</span>
-            <span class="k">call </span><span class="n">lincoa</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">npt</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">ia</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">rhobeg</span><span class="p">,</span><span class="n">rhoend</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">maxfun</span><span class="p">,</span><span class="n">calfun</span><span class="p">)</span>
-        <span class="k">end do</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">!     Set the initial vector of variables. The JCASE=1,6 loop gives six</span>
+<span class="w">    </span><span class="c">!       different choices of NPT when LINCOA is called.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">        </span><span class="n">xs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">        </span><span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">        </span><span class="n">zs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">        </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">        </span><span class="k">do </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">np</span>
+<span class="w">            </span><span class="n">xs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">min</span><span class="w"> </span><span class="p">(</span><span class="n">xs</span><span class="p">,</span><span class="w"> </span><span class="n">xp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<span class="w">            </span><span class="n">ys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">min</span><span class="w"> </span><span class="p">(</span><span class="n">ys</span><span class="p">,</span><span class="w"> </span><span class="n">yp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<span class="w">            </span><span class="n">zs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">min</span><span class="w"> </span><span class="p">(</span><span class="n">zs</span><span class="p">,</span><span class="w"> </span><span class="n">zp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<span class="w">            </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">max</span><span class="w"> </span><span class="p">(</span><span class="n">ss</span><span class="p">,</span><span class="w"> </span><span class="n">xp</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">yp</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">zp</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="k">        </span><span class="n">fmax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ss</span><span class="o">-</span><span class="n">xs</span><span class="o">-</span><span class="n">ys</span><span class="o">-</span><span class="n">zs</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">6.0_wp</span>
+<span class="w">        </span><span class="k">do </span><span class="n">jcase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span>
+<span class="w">            </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span>
+<span class="w">                </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span>
+<span class="w">            </span><span class="k">end do</span>
+<span class="k">            </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">xs</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ys</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">zs</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ss</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ss</span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ss</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">    </span><span class="c">!     Call of LINCOA, which provides the printing given at the end of this</span>
+<span class="w">    </span><span class="c">!       note.</span>
+<span class="w">    </span><span class="c">!</span>
+<span class="w">            </span><span class="n">npt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">jcase</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span>
+<span class="w">            </span><span class="n">rhobeg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0_wp</span>
+<span class="w">            </span><span class="n">rhoend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0e-6_wp</span>
+<span class="w">            </span><span class="n">iprint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="n">maxfun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000</span>
+<span class="w">            </span><span class="k">print </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="n">npt</span><span class="p">,</span><span class="w"> </span><span class="n">rhoend</span>
+<span class="mi">70</span><span class="w">          </span><span class="k">format</span><span class="w"> </span><span class="p">(</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Output from LINCOA with  NPT =&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">i4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;  and  RHOEND =&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">           </span><span class="p">&amp;</span><span class="w"> </span><span class="n">pd12</span><span class="p">.</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">            </span><span class="k">call </span><span class="n">lincoa</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">npt</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">ia</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">rhobeg</span><span class="p">,</span><span class="n">rhoend</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">maxfun</span><span class="p">,</span><span class="n">calfun</span><span class="p">)</span>
+<span class="w">        </span><span class="k">end do</span>
 
 <span class="k">    contains</span>
 
-<span class="k">        subroutine </span><span class="n">calfun</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="k">        subroutine </span><span class="n">calfun</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
 
-            <span class="k">implicit none</span>
+<span class="w">            </span><span class="k">implicit none</span>
 
-<span class="k">            </span><span class="kt">integer</span> <span class="kd">::</span> <span class="n">n</span>
-            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span>
-            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f</span>
+<span class="k">            </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span>
+<span class="w">            </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="w">            </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">f</span>
 
-            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">v12</span><span class="p">,</span><span class="n">v13</span><span class="p">,</span><span class="n">v14</span><span class="p">,</span><span class="n">v23</span><span class="p">,</span><span class="n">v24</span><span class="p">,</span><span class="n">v34</span><span class="p">,</span><span class="n">del1</span><span class="p">,</span><span class="n">del2</span><span class="p">,</span><span class="n">del3</span><span class="p">,</span><span class="n">del4</span><span class="p">,</span><span class="n">temp</span>
+<span class="w">            </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">v12</span><span class="p">,</span><span class="n">v13</span><span class="p">,</span><span class="n">v14</span><span class="p">,</span><span class="n">v23</span><span class="p">,</span><span class="n">v24</span><span class="p">,</span><span class="n">v34</span><span class="p">,</span><span class="n">del1</span><span class="p">,</span><span class="n">del2</span><span class="p">,</span><span class="n">del3</span><span class="p">,</span><span class="n">del4</span><span class="p">,</span><span class="n">temp</span>
 
-            <span class="n">f</span> <span class="o">=</span> <span class="n">fmax</span>
-            <span class="n">v12</span> <span class="o">=</span> <span class="n">x</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span> <span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-            <span class="n">v13</span> <span class="o">=</span> <span class="n">x</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span> <span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-            <span class="n">v14</span> <span class="o">=</span> <span class="n">x</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span> <span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-            <span class="n">v23</span> <span class="o">=</span> <span class="n">x</span> <span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span> <span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-            <span class="n">v24</span> <span class="o">=</span> <span class="n">x</span> <span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span> <span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-            <span class="n">v34</span> <span class="o">=</span> <span class="n">x</span> <span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span> <span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-            <span class="n">del1</span> <span class="o">=</span> <span class="n">v23</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">-</span> <span class="n">v24</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="o">+</span> <span class="n">v34</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">del1</span> <span class="o">&lt;=</span> <span class="n">zero</span><span class="p">)</span> <span class="k">return</span>
-<span class="k">            </span><span class="n">del2</span> <span class="o">=</span> <span class="o">-</span> <span class="n">v34</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">-</span> <span class="n">v13</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">+</span> <span class="n">v14</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">del2</span> <span class="o">&lt;=</span> <span class="n">zero</span><span class="p">)</span> <span class="k">return</span>
-<span class="k">            </span><span class="n">del3</span> <span class="o">=</span> <span class="o">-</span> <span class="n">v14</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">v24</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">v12</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">del3</span> <span class="o">&lt;=</span> <span class="n">zero</span><span class="p">)</span> <span class="k">return</span>
-<span class="k">            </span><span class="n">del4</span> <span class="o">=</span> <span class="o">-</span> <span class="n">v12</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="o">+</span> <span class="n">v13</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">-</span> <span class="n">v23</span> <span class="o">*</span> <span class="n">x</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">del4</span> <span class="o">&lt;=</span> <span class="n">zero</span><span class="p">)</span> <span class="k">return</span>
-<span class="k">            </span><span class="n">temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">del1</span><span class="o">+</span><span class="n">del2</span><span class="o">+</span><span class="n">del3</span><span class="o">+</span><span class="n">del4</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="n">del1</span><span class="o">*</span><span class="n">del2</span><span class="o">*</span><span class="n">del3</span><span class="o">*</span><span class="n">del4</span><span class="p">)</span>
-            <span class="n">f</span> <span class="o">=</span> <span class="nb">min</span> <span class="p">(</span><span class="n">temp</span><span class="o">/</span><span class="mf">6.0_wp</span><span class="p">,</span> <span class="n">fmax</span><span class="p">)</span>
+<span class="w">            </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fmax</span>
+<span class="w">            </span><span class="n">v12</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">            </span><span class="n">v13</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">            </span><span class="n">v14</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">            </span><span class="n">v23</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">            </span><span class="n">v24</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">            </span><span class="n">v34</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="w">            </span><span class="n">del1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v23</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v24</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v34</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">del1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">zero</span><span class="p">)</span><span class="w"> </span><span class="k">return</span>
+<span class="k">            </span><span class="n">del2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v34</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v13</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v14</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">del2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">zero</span><span class="p">)</span><span class="w"> </span><span class="k">return</span>
+<span class="k">            </span><span class="n">del3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v14</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v24</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v12</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">del3</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">zero</span><span class="p">)</span><span class="w"> </span><span class="k">return</span>
+<span class="k">            </span><span class="n">del4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v12</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v13</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">v23</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">del4</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">zero</span><span class="p">)</span><span class="w"> </span><span class="k">return</span>
+<span class="k">            </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">del1</span><span class="o">+</span><span class="n">del2</span><span class="o">+</span><span class="n">del3</span><span class="o">+</span><span class="n">del4</span><span class="p">)</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">del1</span><span class="o">*</span><span class="n">del2</span><span class="o">*</span><span class="n">del3</span><span class="o">*</span><span class="n">del4</span><span class="p">)</span>
+<span class="w">            </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">min</span><span class="w"> </span><span class="p">(</span><span class="n">temp</span><span class="o">/</span><span class="mf">6.0_wp</span><span class="p">,</span><span class="w"> </span><span class="n">fmax</span><span class="p">)</span>
 
-        <span class="k">end subroutine </span><span class="n">calfun</span>
+<span class="w">        </span><span class="k">end subroutine </span><span class="n">calfun</span>
 
-    <span class="k">end subroutine </span><span class="n">lincoa_test</span>
+<span class="w">    </span><span class="k">end subroutine </span><span class="n">lincoa_test</span>
 </pre></div>
 
     </section>
     <br>
     
-    
     </div>
   </div>
 
-
-    <hr>    
+      <hr>
     </div> <!-- /container -->
     <footer>
       <div class="container">
-      <div class="row">
-        <div class="col-xs-6 col-md-6"><p>PowellOpt was developed by Jacob Williams<br>&copy; 2021 
-                                          </p>
+        <div class="row justify-content-between">
+          <div class="col"><p>PowellOpt was developed by Jacob Williams<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
         </div>
-        <div class="col-xs-6 col-md-6">
-          <p class="text-right">
-            Documentation generated by 
-            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
-            
-            
-          </p>
-        </div>
-      </div>
-      <br>
-      </div> <!-- /container -->    
+        <br>
+      </div> <!-- /container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
-<!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
--->
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
 
     <!-- MathJax JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
-        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
-      });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
-    
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
   </body>
 </html>
